@@ -1,12 +1,12 @@
 require("dotenv").config();
 var express = require("express");
 var path = require("path");
+const mongoose = require("mongoose");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const cors = require("cors");
 
 // MongoDB
-var mongoose = require("mongoose");
 mongoose.connect(process.env.MONGO_URL, {
   useUnifiedTopology: true,
   useNewUrlParser: true
